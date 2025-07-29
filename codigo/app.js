@@ -1,9 +1,9 @@
 angular.module("Reproductor", [])
     .controller("ControladorReproductor", function ($scope, $http) {
 
-
         $scope.artistas = [];
         $scope.canciones = [];
+        $scope.artistaSeleccionado = "";
 
         //cargue de los datos (solo posible mediante servicio)
         $http.get("datos/Musiteca.json")
@@ -12,6 +12,7 @@ angular.module("Reproductor", [])
             });
 
         $scope.seleccionarArtista = function (artista) {
-            $scope.canciones= artista.Canciones;
+            $scope.canciones = artista.Canciones;
+            $scope.artistaSeleccionado = artista.Nombre;
         }
     });

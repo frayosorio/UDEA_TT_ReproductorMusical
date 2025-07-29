@@ -22,7 +22,7 @@
                 </ul>
             </div>
             <div class="listaCanciones">
-                <h2>Canciones de </h2>
+                <h2>Canciones de {{ artistaSeleccionado }}</h2>
                 <ul>
                     <li ng-repeat="cancion in canciones" ng-click="seleccionarCancion(cancion)">
                         {{ cancion.Titulo }}
