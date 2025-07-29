@@ -60,7 +60,7 @@ h2 {
     box-shadow: inset 0 1px 5px black;
 }
 
-.listaArtistas ul {
+.listaArtistas ul, .listaCanciones ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -72,7 +72,7 @@ h2 {
     background-color: #ffffff;
 }
 
-.listaArtistas li {
+.listaArtistas li, .listaCanciones li {
     padding: 12px 15px;
     cursor: pointer;
     border-bottom: 1px solid #eee;
