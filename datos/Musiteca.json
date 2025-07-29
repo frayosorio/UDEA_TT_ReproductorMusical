@@ -1,6 +1,22 @@
 {
   "Artistas": [
     {
+      "Nombre": "Binomio De Oro",
+      "Canciones": [
+        {
+          "Titulo": "Hoy Me Di Cuenta"
+        }
+      ]
+    },
+    {
+      "Nombre": "System Of A Down",
+      "Canciones": [
+        {
+          "Titulo": "Aerials"
+        }
+      ]
+    },
+    {
       "Nombre": "Bad Bunny",
       "Tipo": "Solista",
       "Pais": "Puerto Rico",
@@ -44,7 +60,7 @@
         }
       ]
     },
-	{
+    {
       "Nombre": "Karol G",
       "Tipo": "Solista",
       "Pais": "Colombia",

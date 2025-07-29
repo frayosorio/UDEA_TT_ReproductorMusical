@@ -22,11 +22,15 @@ angular.module("Reproductor", [])
         $scope.seleccionarCancion = function (cancion) {
             $scope.cancionSeleccionada = cancion.Titulo + " - " + $scope.artistaSeleccionado;
             $scope.rutaCancion = "canciones/" + $scope.artistaSeleccionado + " - " + cancion.Titulo + ".mp3";
+            $scope.reproductor.src = $scope.rutaCancion;
         }
 
 
         $scope.reproducir = function () {
-            $scope.reproductor.src = $scope.rutaCancion;
             $scope.reproductor.play();
+        }
+
+        $scope.pausar = function () {
+            $scope.reproductor.pause();
         }
     });
