@@ -5,6 +5,8 @@ angular.module("Reproductor", [])
         $scope.canciones = [];
         $scope.artistaSeleccionado = "";
         $scope.cancionSeleccionada = "";
+        $scope.rutaCancion = "";
+        $scope.reproductor = new Audio();
 
         //cargue de los datos (solo posible mediante servicio)
         $http.get("datos/Musiteca.json")
@@ -19,5 +21,12 @@ angular.module("Reproductor", [])
 
         $scope.seleccionarCancion = function (cancion) {
             $scope.cancionSeleccionada = cancion.Titulo + " - " + $scope.artistaSeleccionado;
+            $scope.rutaCancion = "canciones/" + $scope.artistaSeleccionado + " - " + cancion.Titulo + ".mp3";
+        }
+
+
+        $scope.reproducir = function () {
+            $scope.reproductor.src = $scope.rutaCancion;
+            $scope.reproductor.play();
         }
     });
