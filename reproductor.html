@@ -12,7 +12,6 @@
     <div class="principal">
         <h1>Reproductor de M&uacute;sica</h1>
         <div class="artistas">
-
             <div class="listaArtistas">
                 <h2>Artistas</h2>
                 <ul>
@@ -22,7 +21,7 @@
                 </ul>
             </div>
             <div class="listaCanciones">
-                <h2>Canciones de {{ artistaSeleccionado }}</h2>
+                <h2 ng-if="artistaSeleccionado!=''">Canciones de {{ artistaSeleccionado }}</h2>
                 <ul>
                     <li ng-repeat="cancion in canciones" ng-click="seleccionarCancion(cancion)">
                         {{ cancion.Titulo }}
@@ -30,10 +29,13 @@
                 </ul>
             </div>
         </div>
-        <div class="canciones">
-
+        <div class="reproductor">
+            <h3>Reproduciendo ahora</h3>
+            {{ cancionSeleccionada }}
         </div>
     </div>
+
+
 </body>
 
 </html>
