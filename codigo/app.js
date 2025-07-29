@@ -43,12 +43,8 @@ angular.module("Reproductor", [])
 
         $interval(function () {
             if (!$scope.reproductor.paused) {
-
-                //window.alert($scope.reproductor.currentTime);
-
-
                 $scope.tiempoActual = $scope.reproductor.currentTime;
             }
-        }, 500,0,true);
+        }, 500, 0, true);
 
     });
